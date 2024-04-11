@@ -28,13 +28,13 @@ void printFun(int a[], int n)
         printf("%d  ", a[i]);
     printf("\n");
 }
- 
+
 void MergeArrays(int a[], int b[], int A[],int m, int n, int p){
-    for(int i=0; i<(m+1); ++i){
+    for(int i=0; i<(n+1); ++i){
         A[i]=a[i];
     }
-    for(int i=0; i<(p+1-m); ++i){
-        A[i+m+1]=b[i];
+    for(int i=0; i<(p+1-n); ++i){
+        A[i+n+1]=b[i];
     }
     int i=m,j=n+1;
     while (i<j && j<=p){
@@ -48,6 +48,7 @@ void MergeArrays(int a[], int b[], int A[],int m, int n, int p){
         }
     }
 }
+
 //test
 int main()
 {
